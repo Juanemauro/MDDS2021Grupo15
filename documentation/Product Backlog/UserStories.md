@@ -7,7 +7,7 @@ La cooperativa se ha contactado con nosotros porque necesita implementar una pá
 	- Indicar categoría de volumen de los materiales (caja, baúl de auto, caja de camioneta, camión).
 	- Si la distancia del centro de acoplo al lugar de retiro es mayor a 6 km, se deniega la solicitud y se le informa que lo acerque el mismo al centro de acoplo.
 
-** ¿Es necesario escribir las opciones en los criterios de aceptaciones? **
+**¿Es necesario escribir las opciones en los criterios de aceptaciones?**
 
 - Como ciudadano quiero registrar que el cartonero visitó el lugar de retiro para <objetivo>.
-** ¿Está user story es válida? Porque en el párrafo 4 dice que el cartonero tiene que marcar los domicilios visitados. ¿Va una o van las dos? **
+**¿Está user story es válida? Porque en el párrafo 4 dice que el cartonero tiene que marcar los domicilios visitados. ¿Va una o van las dos?**
