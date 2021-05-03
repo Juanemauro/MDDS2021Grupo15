@@ -22,10 +22,10 @@
 
 ## Como secretaria de la cooperativa quiero poder modificar datos de un cartonero mantener el sistema actualizado.
 	Criterios de aceptación:
-	- La secretaria debe estar autenticada.
-	- Los datos que se pueden modificar son: datos de contacto o un cambio de vehículo.
+		- La secretaria debe estar autenticada.
+		- Los datos que se pueden modificar son: datos de contacto o un cambio de vehículo.
 
-## Como secretaria de la cooperativa quiero poder eliminar los datos de un cartonero mantener el sistema actualizado.
+## Como secretaria de la cooperativa quiero poder eliminar datos de un cartonero mantener el sistema actualizado.
 	Criterios de aceptación:
 		- La secretaria debe estar autenticada.
 
@@ -57,7 +57,7 @@
 
 ## Como ciudadano quiero poder vincularme como otros ciudadanos para generar una comunidad recicladora.
 
-## Como ciudadano quiero poder cargar una oferta de transporte para (beneficiar a otra persona, conseguir participantes) simplificar la operatoria.
+## Como ciudadano quiero poder cargar una oferta de transporte para llevar los materiales de otro al centro de acopio.
 	Criterios de aceptación:
 		- Indicar nombre, teléfono, email, dirección, espacio disponible y espacio de texto libre.
 
@@ -66,24 +66,24 @@
 		- Indicar dirección, nombre, teléfono y volumen de los materiales a retirar.
 		- Enviar mail al ciudadano que generó la oferta.
 
-## Como ciudadano quiero poder aceptar una oferta del postulante //de retiro de acoplo de vecino amigable// para “contribuir”. //DUDA
+## Como ciudadano quiero poder aceptar una oferta del postulante para que se envien los datos al postulante. 
 	Criterios de aceptación:
 		- Enviar datos del ciudadano solicitante al postulante.
 
-## Como ciudadano quiero poder rechazar una oferta del postulante //retiro de acoplo de vecino amigable// para ...
+## Como ciudadano quiero poder rechazar una oferta del postulante  para elegir a sus postulantes.
 	Criterios de aceptación:
 		- Enviar notificación al postulante.
 
 ## Como secretaria quiero saber qué porcentaje le corresponde a cada cartonero para así saber cuánto tiene que pagarle.
 	Criterio de aceptación:
 		- La secretaria debe estar autenticada.
-## Como secretaria quiero conocer el listado de kilos por cada cartonero para restar los kilos de manera equitativa.
+## Como secretaria quiero conocer el listado de kilos por cada cartonero para tener un control del total acopiado.
 	Criterio de aceptación:
 		- La secretaria debe estar autenticada.
 
-## Como secretaria quiero registrar la cantidad de kilos vendidos para <objetivo> (¿sería el mismo objetivo que 18?).
+## Como secretaria quiero registrar la cantidad de kilos vendidos para restar los kilos de manera equitativa.
 	Criterio de aceptación:
-	- La secretaria debe estar autenticada.
+		- La secretaria debe estar autenticada.
 
 
 
