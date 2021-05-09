@@ -3,10 +3,11 @@ Nuestro propósito es desarrollar un sistema de gestión para administrar los pr
 
 Una solución exitosa permitirá englobar todas las necesidades a la hora de administrar y organizar los residuos recibidos en el centro de acopio, haciéndolo más sencillo y práctico. Para todos aquellos cartoneros y vecinos que deseen usar la app, además de facilitar, mejorar y agilizar la gestión de reciclaje, planea otorgar información detallada sobre los tipos de materiales aceptados y a su vez, crear una comunidad entre los usuarios.
 # Target group
-Cartoneros: responsables de llevar a cabo el retiro de los materiales reciclables.
-Ciudadanos pasivos: personas que tienen como objetivo solicitar el retiro de materiales en su domicilio.
-Vecinos “buena onda”: personas que deseen trasladar su material y el de otros (postulantes).
-Secretaria: gestora y responsable del uso de la aplicación en el centro de acopio
+* Cartoneros: responsables de llevar a cabo el retiro de los materiales reciclables.
+* Ciudadanos pasivos: personas que tienen como objetivo solicitar el retiro de materiales en su domicilio.
+* Vecinos “buena onda”: personas que deseen trasladar su material y el de otros (postulantes).
+* Secretaria: gestora y responsable del uso de la aplicación en el centro de acopio
+
 # Needs
 La necesidad de gestionar el reciclado de residuos posee una prioridad alta. El principal problema es no tener una correcta administración de los materiales reciclables. Una solución propuesta es, a través del formulario de la aplicación, o también mediante postulaciones de algunos ciudadanos predispuestos a encargarse del traslado de los mismos.
 
