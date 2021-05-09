@@ -1,4 +1,4 @@
-#Criterio de DONE:
+# Criterio de DONE:
 
 * Los miembros del equipo de desarrollo se agruparán según la parte en la que estén trabajando. 
  
