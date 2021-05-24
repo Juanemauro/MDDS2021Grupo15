@@ -8,6 +8,6 @@
 
 * Se modela cada User Story en el código del software.
 
-* Cada user story cuenta su documentación asociada.
+* Cada User Story cuenta su documentación asociada.
     * Diagrama de clases
     * Diagrama de secuencia
