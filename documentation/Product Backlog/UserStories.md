@@ -33,7 +33,7 @@
 
 ## Como cartonero quiero poder pesar los materiales para llevar un control de la cantidad de materiales.
 	Criterios de aceptación:
-		- El cartonero debe estar registrado. 
+		- El cartonero debe estar registrado. Caso contrario, le dará la opción de hacerlo.
 
 ## Como secretaria quiero consultar los domicilios visitados por el cartonero para armar el próximo recorrido.
 	Criterios de aceptación:
@@ -56,7 +56,7 @@
 		- La secretaria debe estar autenticada.
 
 
-## Como ciudadano quiero poder vincularme como otros ciudadanos para generar una comunidad recicladora.
+## Como ciudadano quiero poder acceder a la cartelera virtual para poder vincular ciudadanos en base a las ofertas de transporte de esta. (ÉPICA)
 
 ## Como ciudadano quiero poder cargar una oferta de transporte para llevar los materiales de otro al centro de acopio.
 	Criterios de aceptación:
@@ -75,10 +75,7 @@
 	Criterios de aceptación:
 		- Enviar notificación al postulante.
 
-## Como secretaria quiero saber qué porcentaje le corresponde a cada cartonero para así saber cuánto tiene que pagarle.
-	Criterio de aceptación:
-		- La secretaria debe estar autenticada.
-## Como secretaria quiero conocer el listado de kilos por cada cartonero para tener un control del total acopiado.
+## Como secretaria quiero conocer el listado de kilos por cada cartonero para saber qué porcentaje le corresponde.
 	Criterio de aceptación:
 		- La secretaria debe estar autenticada.
 
