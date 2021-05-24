@@ -1,7 +1,7 @@
 # Como ciudadano quiero conocer el listado de los materiales reciclables aceptados para saber con qué puedo contribuir.
-## Como ciudadano quiero buscar un material reciclable para saber si está dentro de la lista.
-## Como ciudadano quiero ver el listado de materiales filtrado por categoría para verlo de forma ordenada.
-## Como ciudadano quiero ver una foto de cada material para poder identificarlo mejor.
+### Como ciudadano quiero buscar un material reciclable para saber si está dentro de la lista.
+### Como ciudadano quiero ver el listado de materiales filtrado por categoría para verlo de forma ordenada.
+### Como ciudadano quiero ver una foto de cada material para poder identificarlo mejor.
 
 # Como ciudadano quiero agregar un nuevo material reciclable para contribuir el medio ambiente.
 * Criterios de aceptación
