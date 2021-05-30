@@ -16,7 +16,7 @@
 		- En caso de asignarse varias viviendas a un cartonero, el total del recorrido (incluido el viaje hasta el depósito) no debe superar los 6 km.
 		- En aquellos casos donde el volumen a retirar corresponde a la categoría “a”, solo se le deberá asignar a un cartonero en caso de que el lugar de recolección quede en su camino a otras viviendas con categorías de volumen mayores (es decir, “b”, “c” y “d”).
 
-## Como secretaria quiero poder dar de alta un cartonero para mantener el sistema actualizado.
+## Como secretaria quiero poder dar de alta un cartonero para que el cartonero pueda entrar al centro de acopio a dejar sus materiales.
 	Criterios de aceptación:
 		- La secretaria debe estar autenticada.
 		- Agregar nombre, apellido, DNI, dirección y fecha de nacimiento.
