@@ -21,12 +21,12 @@
 		- La secretaria debe estar autenticada.
 		- Agregar nombre, apellido, DNI, dirección y fecha de nacimiento.
 
-## Como secretaria quiero poder modificar datos de un cartonero mantener el sistema actualizado.
+## Como secretaria quiero poder modificar datos de un cartonero para mejorar la asignacion de recorrido.
 	Criterios de aceptación:
 		- La secretaria debe estar autenticada.
 		- Los datos que se pueden modificar son: datos de contacto o un cambio de vehículo.
 
-## Como secretaria quiero poder eliminar datos de un cartonero mantener el sistema actualizado.
+## Como secretaria quiero poder eliminar datos de un cartonero mantener darlo de baja del sistema.
 	Criterios de aceptación:
 		- La secretaria debe estar autenticada.
 
