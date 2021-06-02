@@ -12,9 +12,5 @@
 # Como secretaria quiero agregar un nuevo material reciclable al sistema para poder conocer todos los materiales que se aceptan en el centro de acopio. 
     Crierio de aceptacion:
         - La secretaria deberá estar autenticada.
-        - Se deberá clasificar a ese material dentro de unas de las categorías.
+        - Se deberá clasificar a ese material dentro de unas de las categorías (papel, cartón, envases plásticos, latas de conserva, tetrabrik, envases de alumnino, botellas de vidrio, etc.
         - Si no existe la categoría, esta deberá ser creada.
-
-
-
-
