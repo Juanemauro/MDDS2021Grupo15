@@ -3,7 +3,6 @@
     - Verificar que el usuario y la contraseña son correctas.
     - Generar opción para cerrar sesión.
 
-
 ---------------------------------------------------------------------------------------------------------------------------------------------------------- 
 
 # Como secretaria quiero conocer el listado de kilos por cada cartonero para saber qué porcentaje le corresponde.
