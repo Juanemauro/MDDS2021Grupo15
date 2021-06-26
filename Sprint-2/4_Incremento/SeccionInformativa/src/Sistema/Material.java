@@ -1,6 +1,7 @@
 package Sistema;
 
 public class Material {
+
 	private String nombre;
 	private String categoria;
 
@@ -16,5 +17,19 @@ public class Material {
 	public String getCategoria(){
 		return categoria;
 	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+
+	@Override
+	public String toString() {
+		return "Nombre de Material: "+ getNombre()+ " Categoria: "+ getCategoria();
+	}
+
 
 }

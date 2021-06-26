@@ -3,18 +3,15 @@ import Sistema.Material;
 
 public class FiltroCategoria extends Filtro {
 
+	private String categoria;
+		
+	public FiltroCategoria(String categoria){
+		this.categoria= categoria;
+	}
+
 	@Override
 	public boolean cumple(Material m1) {
-		// TODO Auto-generated method stub
-		//retorna si el nombre del material es igual al CategoriaAcomparar
-
-		return false;
+		return (m1.getCategoria().equals(categoria));
 	}
 	
-	private String CategoriaAComparar;
-		
-		public FiltroCategoria(String Categoria){
-		CategoriaAComparar= Categoria;
-	}
-
 }
