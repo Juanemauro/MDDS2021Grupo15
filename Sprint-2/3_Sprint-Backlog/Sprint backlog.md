@@ -4,6 +4,7 @@
 
 # Implementar clase VistaInicio.
 # Implementar clase VistaLogin.
+# Implementar clase VistaLogout.
 # Implementar clase VistaSecretaria.
 # Implementar clase VistaMaterialesAceptados.
 # Implementar clase VistaAgregarMaterial.
@@ -35,5 +36,7 @@
 ### Implementar función para buscar un cartonero determinado. 
 
 ## Generar opción para volver al menú inicio.
+
+
 
 
