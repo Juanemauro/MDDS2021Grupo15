@@ -10,7 +10,7 @@ public class AuthUsuario {
 
     public  AuthUsuario(){
         this.token=false;
-        this.dirArchivo = "c:\\usuarios.log";   
+        this.dirArchivo = "C:\\MDDS2021Grupo15\\Sprint-2\\4_Incremento\\SeccionInformativa\\src\\Sistema\\usuarios.txt";   
     }
 
 
@@ -32,7 +32,7 @@ public class AuthUsuario {
             String[] parts =lista.get(line).split(" ");
             String usr = parts[0];
             String pass = parts[1];
-            if (usr==usuario && pass==contrasenia){
+            if (usr.equals(usuario) && pass.equals(contrasenia)){
                 this.token=true;
                 return true;
             }

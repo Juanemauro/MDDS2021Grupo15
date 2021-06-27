@@ -9,6 +9,7 @@ public class ControladorMaterial {
     private Vector<Material> materialesAceptados;
 
     public ControladorMaterial(){
+    	materialesAceptados=new Vector<Material>();
     }
 
     public void addMaterial(Material m){
@@ -28,6 +29,13 @@ public class ControladorMaterial {
 		return salida;
 	}
 
+    public Vector<Material> getMaterial(){
+  		Vector<Material> salida = new Vector<Material>();
+  		for (int i=0; i<materialesAceptados.size(); i++) {
+            salida.add(materialesAceptados.get(i));
+  		}
+  		return salida;
+  	}
     
 
 }

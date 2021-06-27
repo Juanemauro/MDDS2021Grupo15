@@ -6,7 +6,9 @@ public class ControladorCartonero {
 
     Vector<Cartonero> cartoneros;
 
-    public ControladorCartonero(){}
+    public ControladorCartonero(){
+    	cartoneros= new Vector<Cartonero>();
+    }
 
     public void addCartonero(Cartonero c){
         if (!cartoneros.contains(c)){

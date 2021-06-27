@@ -2,7 +2,7 @@ package API;
 
 import java.util.Vector;
 
-import Filtros.FiltroTrue;
+
 import Sistema.*;
 
 public class Sesion {
@@ -16,7 +16,7 @@ public class Sesion {
 	
 	public Vector<Material> getMaterial(Usuario u){
 		Vector<Material> materiales= new Vector<Material>();
-		materiales.addAll(nuestrosMateriales.getMaterial(new FiltroTrue()));
+		materiales.addAll(nuestrosMateriales.getMaterial());
 		return materiales;
 	}
 	
@@ -38,10 +38,11 @@ public class Sesion {
 		u.logout();
 	}
 	
-	public Vector<Material> getMaterialesAcopiados(Usuario u, Cartonero c) {
-		if(u.getToken()==true)
+	public Vector<Material> getMaterialesAcopiados(Usuario u, String s) {
+		if(u.getToken()==true) {
+			Cartonero c= new Cartonero(s);
 			return nuestrosCartoneros.getMaterialesAcopiados(c);
-		else 
+		}else 
 			return null;
 	}
 }

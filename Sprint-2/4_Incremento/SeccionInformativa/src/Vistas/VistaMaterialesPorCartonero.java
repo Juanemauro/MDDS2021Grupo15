@@ -4,46 +4,42 @@ import java.util.Scanner;
 import java.util.Vector;
 
 import API.Sesion;
-import Sistema.Cartonero;
 import Sistema.Material;
 import Sistema.Usuario;
 
 public class VistaMaterialesPorCartonero {
-	public void mostrar(Usuario u) {
+	public void mostrar(Usuario u, Sesion mySesion) {
+		VistaInicio inic= new VistaInicio(u, mySesion);
 		if(u.getToken()) {
 			System.out.println("Ingrese nombre del Cartonero: ");
 			Scanner in = new Scanner(System.in);
+			
 			String nomCart= in.next();
-			Sesion mySesion = new Sesion();
-			Vector<Material> matPorCar= mySesion.getMaterialesAcopiados(u, new Cartonero(nomCart));
-			System.out.println("El material fue agregado con exito!!");
-			System.out.println("1) agregar otro material ");
-			System.out.println("2) volver al inicio");
-			int op =in.nextInt();
-			if(op == 1) {
-				this.mostrar(u);
-			}else if(op == 2) {
-				VistaInicio log= new VistaInicio();
-				log.mostrar();
+			Vector<Material> matPorCar= mySesion.getMaterialesAcopiados(u, nomCart);
+			
+			if(matPorCar.size()!=0) {
+				for(int i=0; i<matPorCar.size(); i++) {
+					System.out.println("Los materiales acopiados por: " + nomCart);
+					System.out.println("- "+ matPorCar.get(i));
+				}				
+			}else 
+				System.out.println("El cartonero con el nombre ingresado no tine materiales acopiados!!");
+			
+			System.out.println("1) Preguntar por otro cartonero");
+			System.out.println("2) volver a inicio");
+			
+			String op=in.next();
+			if(op.equals("1")){
+				this.mostrar(u, mySesion);
+			}else if(op.equals("2")) {
+				inic.mostrar();
 			}else 
 				System.out.println("opcion incorrecta");
-			}else {
-				System.out.println("El material no pudo ser agregado!!");
-				System.out.println("1) reintenar");
-				System.out.println("2) volver al inicio");
-				int op =in.nextInt();
-				if(op == 1) {
-					this.mostrar(u);
-				}else if(op == 2) {
-					VistaInicio log= new VistaInicio();
-					log.mostrar();
-				}else 
-					System.out.println("opcion incorrecta");
-			}
+		
 			in.close();
-		}else {
+		
+		}else{
 			System.out.println("nos esta autenticado");
-			VistaInicio inic= new VistaInicio();
 			inic.mostrar();
 		}
 	}
