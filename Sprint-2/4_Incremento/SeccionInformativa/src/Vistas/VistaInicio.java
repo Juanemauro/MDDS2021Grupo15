@@ -1,47 +1,42 @@
 package Vistas;
 
-import java.util.Scanner;
-
 import API.Sesion;
 import Sistema.Usuario;
 
-public class VistaInicio {
-	private Usuario u; 
-	private Sesion mySesion;
+public class VistaInicio extends Vista{
+	
 	public VistaInicio(){
-		u= new Usuario();
-		mySesion= new Sesion();
+		super(new Usuario(false),new Sesion(), "Inicio");
 	}
 	
-	public VistaInicio(Usuario u, Sesion s){
-		this.u= u;
-		mySesion= s;
+	public VistaInicio(Sesion s){
+		super(new Usuario(false),s, "Inicio");
 	}
 	
 	public void mostrar() {
-		Scanner in = new Scanner(System.in);
+		Vista login = new VistaLogin(this,this,this.getU(),this.getMySesion(),"Login");
+		Vista verMatAcep = new VistaVerMaterialesAceptados(this,this,this.getU(),this.getMySesion(),"Materiales Aceptados");
+		Vista visSecretaria = this.getMySesion().getMenuSecretaria(this.getU(), this, this);
 		
 		System.out.println("Eliga una opcion: ");
-		System.out.println("1) Login ");
-		System.out.println("2) Ver Materiales Aceptados");
-		if(u.getToken())
-			System.out.println("3) Menu Secretaria");
 		
-		String op =in.next();
+		System.out.println("1) "+ login.getNombre());
+		System.out.println("2) "+ verMatAcep.getNombre());
+		
+		if(this.getU().getToken())
+			System.out.println("3) "+ visSecretaria.getNombre());
+		
+		
+		String op =this.getOpElegida();
 		
 		if(op.equals("1")) {
-			VistaLogin log= new VistaLogin();
-			log.mostrar(u, mySesion);
+			login.mostrar();
 		}else if(op.equals("2")) {
-			VistaVerMaterialesAceptados log= new VistaVerMaterialesAceptados();
-			log.mostrar(mySesion, u);
-		}else if(op.equals("3") && u.getToken()) {
-			VistaSecretaria log= new VistaSecretaria();
-			log.mostrar(u,mySesion);
+			verMatAcep.mostrar();
+		}else if(this.getU().getToken() && op.equals("3")) {
+			visSecretaria.mostrar();
 		}else 
 			System.out.println("opcion incorrecta");
 		
-		
-		in.close();
 	}
 }

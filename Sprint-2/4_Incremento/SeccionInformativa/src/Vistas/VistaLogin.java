@@ -1,36 +1,44 @@
 package Vistas;
 
-import java.util.Scanner;
-
 import API.Sesion;
 import Sistema.Usuario;
 
-public class VistaLogin {
-	public void mostrar(Usuario id, Sesion s) {
+public class VistaLogin extends Vista{
+	
+	
+	
+	public VistaLogin(VistaInicio inic, Vista vistaAnterior, Usuario u, Sesion mySesion, String nombre) {
+		super(inic, vistaAnterior, u, mySesion, nombre);
+	}
+
+	public void mostrar() {
 		System.out.println("Ingrese Usuario: ");
-		Scanner in= new Scanner(System.in);
-		String us=  in.next();
+		String us=  this.getOpElegida();
 		System.out.println("Ingrese Contraseña: ");
-		String con=  in.next();
-		if(s.login(id,us, con)){
+		String con=  this.getOpElegida();
+		this.setU(this.getMySesion().login(us, con));
+		if(this.getU().getToken()){
 			System.out.println("Se login exitoso!!");
-			VistaSecretaria sVis= new VistaSecretaria();
-			sVis.mostrar(id,s);
+			
+			VistaSecretaria sVis= new VistaSecretaria(this.getInic(),
+					this,this.getU(),this.getMySesion(),"Menu Secretaria");
+			sVis.mostrar();
+		
 		}else {
 			
 			System.out.println("Usuario o contrasena incorreto!!");
 			System.out.println("1) reintentar");
 			System.out.println("2) inicio");
-			String op =in.next();
+			
+			String op =this.getOpElegida();
 			
 			if(op.equals("1")) {
-				this.mostrar(id, s);
+				this.mostrar();
 			}else if(op.equals("2")) {
-				VistaInicio inic= new VistaInicio(id,s);
-				inic.mostrar();
+				this.getU().logout();
+				this.getInic().mostrar();
 			}else 
 				System.out.println("opcion incorrecta");
 		}
-		in.close();
 	}
 }

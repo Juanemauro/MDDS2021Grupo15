@@ -1,5 +1,7 @@
 package Sistema;
 
+
+
 import java.util.Vector;
 
 public class ControladorCartonero {
@@ -16,15 +18,30 @@ public class ControladorCartonero {
         }
     }
    
-    public Vector<Material> getMaterialesAcopiados(Cartonero c){
-        Vector<Material> salida = new Vector<Material>();
-
-        for(int i=0; i<cartoneros.size(); i++){
+    public Vector<Cartonero> getMaterialesAcopiados(){
+    	Vector<Cartonero>  salida = new Vector<Cartonero>();
+        for(int i=0; i<cartoneros.size();i++){
             Cartonero aux = cartoneros.get(i);
-            salida.addAll(aux.getMaterialesAcopiadosCartoneros());
+            salida.add(aux.copy());
         }
-
         return salida;
     }
     
 }
+
+
+/*
+(
+nombre:String, 
+nombreMaterial: String,
+pesoMaterial:String,
+)
+(
+nombre:String, 
+nombreMaterial: String,
+pesoMaterial:float,
+porcentajeDelTotal:float
+)
+Leon9715:09
+porcentaje = pesoMaterial / pesoTotalMaterial
+*/

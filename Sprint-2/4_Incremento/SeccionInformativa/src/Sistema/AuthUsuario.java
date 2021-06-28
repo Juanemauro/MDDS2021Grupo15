@@ -5,16 +5,16 @@ import java.io.*;
 
 
 public class AuthUsuario {
-    private Boolean token;
+    
     private String dirArchivo;
 
     public  AuthUsuario(){
-        this.token=false;
-        this.dirArchivo = "C:\\MDDS2021Grupo15\\Sprint-2\\4_Incremento\\SeccionInformativa\\src\\Sistema\\usuarios.txt";   
+        File user = new File(System.getProperty("user.name"));
+        this.dirArchivo = "C:\\Users\\"+user+"\\MDDS2021Grupo15\\Sprint-2\\4_Incremento\\SeccionInformativa\\src\\Sistema\\usuarios.txt";   
     }
 
 
-    public Boolean Login (String usuario ,String contrasenia){
+    public Usuario login (String usuario ,String contrasenia){
         ArrayList<String> lista = new ArrayList<String>();
         Scanner log = null;
         try {
@@ -33,20 +33,14 @@ public class AuthUsuario {
             String usr = parts[0];
             String pass = parts[1];
             if (usr.equals(usuario) && pass.equals(contrasenia)){
-                this.token=true;
-                return true;
+              
+                return new Usuario(true);
             }
         }
         //compruebo que el usuario este en la coleccion, en tal caso pongo token en true, sino se vuelve false.
-        this.token=false;
-        return false;
+  
+        return new Usuario(false);
     }
 
-    public Void logOut(){
-        this.token=false;
-		return null;
-    }
-    public Boolean getToken(){
-        return token;
-    }
+   
 }

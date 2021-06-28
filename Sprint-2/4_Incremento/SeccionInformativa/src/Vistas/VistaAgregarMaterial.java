@@ -1,36 +1,46 @@
 package Vistas;
 
-import java.util.Scanner;
+
 
 import API.Sesion;
-import Sistema.Material;
 import Sistema.Usuario;
 
-public class VistaAgregarMaterial{
-	public void mostrar(Usuario u, Sesion mySesion) {
-		Scanner in = new Scanner(System.in);
-		if(u.getToken()) {
+public class VistaAgregarMaterial extends Vista{
+	
+	
+	
+	public VistaAgregarMaterial(VistaInicio inic, Vista vistaAnterior, Usuario u, Sesion mySesion, String nombre) {
+		super(inic, vistaAnterior, u, mySesion, nombre);
+	
+	}
+
+	public void mostrar() {
+		
+		if(this.getU().getToken()) {
 			
 			System.out.println("Ingrese nombre del Material: ");
-			String nomMat= in.next();
+			String nomMat= this.getOpElegida();
 			
 			System.out.println("Ingrese categoria del Material: ");
-			String catMat= in.next();
+			String catMat= this.getOpElegida();
 			
-			if(mySesion.setMaterial(u, new Material(nomMat,catMat))){
+			if(this.getMySesion().setMaterial(this.getU(),nomMat,catMat)){
 				
 				System.out.println("El material fue agregado con exito!!");
-				System.out.println("1) agregar otro material ");
-				System.out.println("2) volver al inicio");
+				System.out.println("1) agregar otro material");
+				System.out.println("2) "+ this.getInic().getNombre());
 				
 				
-				String op =in.next();
+				String op =this.getOpElegida();
+				
 				if(op.equals("1")) {
-					this.mostrar(u,mySesion);
+					
+					this.mostrar();
 					
 				}else if(op.equals("2")) {
-					VistaInicio log= new VistaInicio(u,mySesion);
-					log.mostrar();
+					
+					
+					this.getInic().mostrar();
 				
 				}else 
 						System.out.println("opcion incorrecta");
@@ -38,27 +48,26 @@ public class VistaAgregarMaterial{
 				
 				System.out.println("El material no pudo ser agregado!!");
 				System.out.println("1) reintenar");
-				System.out.println("2) volver al inicio");
+				System.out.println("2) " + this.getInic().getNombre());
 		
-				String op =in.next();
+				String op =this.getOpElegida();
 				
 				if(op.equals("1")) {
-					this.mostrar(u,mySesion);
+					
+					this.mostrar();
+					
 				}else if(op.equals("2")) {
 					
-					VistaInicio log= new VistaInicio(u, mySesion);
-					log.mostrar();
+					this.getInic().mostrar();
 				
 				}else 
 					System.out.println("opcion incorrecta");
 			}
 			
-			in.close();
 		
 		}else {
 			System.out.println("nos esta autenticado");
-			VistaInicio inic= new VistaInicio();
-			inic.mostrar();
+			this.getInic().mostrar();
 		}
 	}
 }

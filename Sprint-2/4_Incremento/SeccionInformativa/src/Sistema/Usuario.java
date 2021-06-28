@@ -1,22 +1,14 @@
 package Sistema;
 
+
 public class Usuario {
 	private boolean token;
 	
-	public Usuario() {
-		token=false;
+	public Usuario(boolean aux) {
+		token=aux;
 	}
 	
-	public boolean login(String usuario, String con) {
-		AuthUsuario auth= new AuthUsuario();
-		if(auth.Login(usuario,con)) {
-			token= true;
-			return true;
-		}else
-			return false;
-	}
-	
-	public void logout() {
+	public void logout(){
 		token=false;
 	}
 	

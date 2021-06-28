@@ -1,47 +1,58 @@
 package Vistas;
 
-import java.util.Scanner;
 
 import API.Sesion;
 import Sistema.Usuario;
 
 
 
-public class VistaSecretaria {
+public class VistaSecretaria extends Vista{
 
-	
-	public void mostrar(Usuario u, Sesion s) {
-		VistaInicio inic = new VistaInicio(u,s);
-		if(u.getToken()) {
+
+	public VistaSecretaria(VistaInicio inic, Vista vistaAnterior, Usuario u, Sesion mySesion, String nombre) {
+		super(inic, vistaAnterior, u, mySesion, nombre);
+	}
+
+	public void mostrar() {
+
+		if(this.getU().getToken()) {
+			Vista visAgrMat= new VistaAgregarMaterial(this.getInic(), this, this.getU(),
+					this.getMySesion(),"Agregar Nuevo Material Aceptado");
+			Vista visMatPC= new VistaMaterialesPorCartonero(this.getInic(), this, this.getU(),
+					this.getMySesion(),"Ver Materiales Por Cartonero");
 			
 			System.out.println("Eliga una opcion: ");
-			System.out.println("1) Logout ");
-			System.out.println("2) agregar Materiales Aceptados");
-			System.out.println("3) ver Materiales Acopiados por cartonero");
-			System.out.println("4) volver a inicio");
+			System.out.println("1) LogOut ");
+			System.out.println("2) "+ visAgrMat.getNombre());
+			System.out.println("3) "+ visMatPC.getNombre());
+			System.out.println("4) "+ this.getInic().getNombre());
 			
-			Scanner in = new Scanner(System.in);
-			String op =in.next();
+			
+			String op =this.getOpElegida();
 			
 			if(op.equals("1")) {
-				s.logOut(u);
-				inic.mostrar();
+				
+				this.getMySesion().logOut(this.getU());
+				this.getInic().mostrar();
+			
 			}else if(op.equals("2")) {
-				VistaAgregarMaterial log= new VistaAgregarMaterial();
-				log.mostrar(u,s);
+				
+				visAgrMat.mostrar();
+			
 			}else if(op.equals("3")) {
-				VistaMaterialesPorCartonero log= new VistaMaterialesPorCartonero();
-				log.mostrar(u,s);
+				
+				visMatPC.mostrar();
+			
 			}else if(op.equals("4")) {
-				inic.mostrar();
+				this.getInic().mostrar();
 			}else 
 				System.out.println("opcion incorrecta");
 			
-			in.close();
+		
 		
 		}else {
 			System.out.println("no estas autenticado");
-		    inic.mostrar();
+		    this.getInic().mostrar();
 		    }
 	}
 }
