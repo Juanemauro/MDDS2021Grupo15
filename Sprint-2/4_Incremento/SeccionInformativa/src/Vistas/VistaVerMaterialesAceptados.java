@@ -18,7 +18,7 @@ public class VistaVerMaterialesAceptados extends Vista{
 		
 		Vector<String> mAcep= this.getMySesion().getMaterial(null);
 		
-		System.out.println("los Materiels Aceptados son: ");
+		System.out.println("los Materiles Aceptados son: ");
 		for(int i=0; i<mAcep.size(); i++) {
 			System.out.println("-" + mAcep.get(i));
 		}

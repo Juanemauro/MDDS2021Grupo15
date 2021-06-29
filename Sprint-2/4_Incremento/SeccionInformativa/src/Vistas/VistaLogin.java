@@ -20,13 +20,12 @@ public class VistaLogin extends Vista{
 		if(this.getU().getToken()){
 			System.out.println("Se login exitoso!!");
 			
-			VistaSecretaria sVis= new VistaSecretaria(this.getInic(),
-					this,this.getU(),this.getMySesion(),"Menu Secretaria");
-			sVis.mostrar();
+			Vista visSecretaria = this.getMySesion().getMenuSecretaria(this.getU(), this.getInic(), this);
+			visSecretaria.mostrar();
 		
 		}else {
 			
-			System.out.println("Usuario o contrasena incorreto!!");
+			System.out.println("Usuario o contrasena incorrecto!!");
 			System.out.println("1) reintentar");
 			System.out.println("2) inicio");
 			

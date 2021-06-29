@@ -18,7 +18,7 @@ public class VistaInicio extends Vista{
 		Vista verMatAcep = new VistaVerMaterialesAceptados(this,this,this.getU(),this.getMySesion(),"Materiales Aceptados");
 		Vista visSecretaria = this.getMySesion().getMenuSecretaria(this.getU(), this, this);
 		
-		System.out.println("Eliga una opcion: ");
+		System.out.println("Elija una opcion: ");
 		
 		System.out.println("1) "+ login.getNombre());
 		System.out.println("2) "+ verMatAcep.getNombre());
